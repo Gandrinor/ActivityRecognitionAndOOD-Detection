@@ -38,4 +38,5 @@ def my_main(_run, dummy, change):
             _run.log_scalar("counter", dummy, i * 2)
             if i % 5 == 0:
                 change = not change
+		#be aware that change is overwritten by config setting on method call!!!
                 log_sth(change=change)

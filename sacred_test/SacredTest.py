@@ -29,9 +29,10 @@ mobs = MongoObserver(
     .replace("\n", ""),
     authSource="admin",
 )
-ex.observers.append(QueueObserver(mobs))
+#ex.observers.append(QueueObserver(mobs))
+ex.observers.append(mobs)
 
-# fs_observer = FileStorageObserver(basedir='my_runs')
-# ex.observers.append(fs_observer)
+#fs_observer = FileStorageObserver(basedir='/home/sbartkow/code/my_runs')
+#ex.observers.append(fs_observer)
 
 r = ex.run()

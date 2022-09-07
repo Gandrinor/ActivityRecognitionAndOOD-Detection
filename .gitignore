@@ -1,2 +1,3 @@
 /storage/
 /exploration/
+*/__pycache__/
