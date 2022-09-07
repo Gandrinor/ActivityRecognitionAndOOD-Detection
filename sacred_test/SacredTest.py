@@ -1,5 +1,5 @@
 from experiment import ex
-from sacred.observers import MongoObserver, FileStorageObserver, QueueObserver
+from sacred.observers import MongoObserver, FileStorageObserver
 import logging
 import sys
 
@@ -26,7 +26,6 @@ mobs = MongoObserver(
     .replace("\n", ""),
     authSource="admin",
 )
-ex.observers.append(QueueObserver(mobs))
 ex.observers.append(mobs)
 
 fs_observer = FileStorageObserver(basedir='/home/sbartkow/code/my_runs')
